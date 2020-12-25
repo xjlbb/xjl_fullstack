@@ -11,16 +11,74 @@
     }        
     body {
         background: url(./images/bg.jpg);
-        background-color: #23ac45;
+        background-color: #000702;
     }
     .starwars{
         height: 17em;
         width: 34em;
-        background-color: red;
+        /* background-color: red; */
         position: absolute;
         top: 50%;
         left: 50%;
+        /* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中。*/
         transform: translate(-50%,-50%);
+        perspective: 800px;
+        transform-style: preserve-3d;
+    }
+    .star,.wars{
+        position: absolute;
+    }
+    .star{
+        top: -0.75em;
+        animation: star 10s ease-out infinite;
+    }
+    .wars{
+        bottom: -0.5em;
+        animation: wars 10s ease-out infinite;
+    }
+    @keyframes star{
+        0%{
+            opacity: 0;
+            transform: scale(1.5);
+        }
+        20%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 0;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: translateZ(-400em);
+        }
+    }
+    @keyframes wars{
+        0%{
+            opacity: 0;
+            transform: scale(1.5);
+        }
+        20%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 0;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: translateZ(-400em);
+        }
+    }
+    .byline{
+        position: absolute;
+        /* background-color: #fff; */
+        transform: translate(5%,1300%);
+        width: 13em;
+        left: 1em;
+    }
+    span{
+        color: aliceblue;
     }
 </style>
 </head>
@@ -37,26 +95,27 @@
     
     <!-- .starwars>img.star[src="./images/wars.svg"]*2 -->
     <div class="starwars">
-        <img src="./images/01.svg" height="10em" class="star">
-        <img src="./images/02.svg" height="10em" class="wars">
+        <img src="./images/star.svg"  class="star">
+        <img src="./images/wars.svg"  class="wars">
     
 
     <!-- h2.byline>span*14 -->
     <h2 class="byline">
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
-        <span>1</span>
+        <span>&nbsp;</span>
+        <span>b</span>
+        <span>o</span>
+        <span>r</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>m</span>
+        <span>o</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>s</span>
     </h2>
 </div>
     </body>
