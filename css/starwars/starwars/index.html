@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端是代码界的导演</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }        
+    body {
+        background: url(./images/bg.jpg);
+        background-color: #000702;
+    }
+    .starwars{
+        height: 17em;
+        width: 34em;
+        /* background-color: red; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* translate()函数是css3的新特性.在不知道自身宽高的情况下，可以利用它来进行水平垂直居中。*/
+        transform: translate(-50%,-50%);
+        perspective: 800px;
+        transform-style: preserve-3d;
+    }
+    .star,.wars{
+        position: absolute;
+    }
+    .star{
+        top: -0.75em;
+        animation: star 10s ease-out infinite;
+    }
+    .wars{
+        bottom: -0.5em;
+        animation: wars 10s ease-out infinite;
+    }
+    @keyframes star{
+        0%{
+            opacity: 0;
+            transform: scale(1.5);
+        }
+        20%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 0;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: translateZ(-400em);
+        }
+    }
+    @keyframes wars{
+        0%{
+            opacity: 0;
+            transform: scale(1.5);
+        }
+        20%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 0;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: translateZ(-400em);
+        }
+    }
+    .byline{
+        position: absolute;
+        /* background-color: #fff; */
+        transform: translate(5%,1300%);
+        width: 13em;
+        left: 1em;
+    }
+    span{
+        color: aliceblue;
+    }
+</style>
+</head>
+<body>
+    <!-- 速度要快 -->
+    <!-- <div class="starwars">
+        <img class="star"  src="./images/star.svg">
+        <img class="wars"  src="./images/wars.svg"> -->
+
+    <!-- .starwars -->
+        <div class="starwars"></div>
+
+    <!-- .stars>img.star*2 -->
+    
+    <!-- .starwars>img.star[src="./images/wars.svg"]*2 -->
+    <div class="starwars">
+        <img src="./images/star.svg"  class="star">
+        <img src="./images/wars.svg"  class="wars">
+    
+
+    <!-- h2.byline>span*14 -->
+    <h2 class="byline">
+        <span>&nbsp;</span>
+        <span>b</span>
+        <span>o</span>
+        <span>r</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>&nbsp;</span>
+        <span>&nbsp;</span>
+        <span>m</span>
+        <span>o</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>s</span>
+    </h2>
+</div>
+    </body>
+</html>
