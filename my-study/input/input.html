@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input标签</title>
+</head>
+<body>
+    <form>
+    <!-- type = "text" 明文输入框 -->
+    账号<input type="text">
+    <br>
+    <!-- 暗文输入框 -->
+    密码<input type="password">
+    <br>
+
+    <!-- 单选框
+         注意点
+         1. 默认情况下单选框不会互斥，想单选框互斥就必须给每一个单选框标签设置一个name属性，然后name属性还必须设置相同的值
+         2. 要想让单选框默认选中某一个框子，那么可以添加一个checked属性
+         3. 在HTML中如果属性的取值和属性的名称一样，可以只写一个，建议不要略
+        -->
+
+    性别：<input type="radio" name="1">男
+    <input type="radio" name="1">女
+    <input type="radio" name="1" checked="checked">保密
+    <br>
+    <!-- 多选框 -->
+    <input type="checkbox">足球
+    <input type="checkbox">篮球
+    <input type="checkbox">棒球
+    </form>
+</body>
+</html>
