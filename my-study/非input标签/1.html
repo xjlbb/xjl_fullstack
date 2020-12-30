@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- selece标签
+    作用：用于定义下拉列表
+    格式：
+    <select>
+        <option>列表数据</option>
+    </select>   
+    注意点：
+    1. 下拉列表不能输入内容，但是可以直接在列表中选择内容
+    2. 可通过给option标签添加一个select属性来指定默认值
+    3. 可以通过给option标签包裹一层 optgroup 标签来给下拉列表中的数据分类
+    -->
+    <select>
+        <optgroup label="北京">
+        <option>朝阳区</option>
+        <option>海淀区</option>
+        </optgroup>
+        <option selected="selected">上海</option>
+        <option>广西</option>
+        <option>武汉</option>
+    </select>
+    <hr>
+    <!-- textarea
+        作用：定义一个多行输入框
+         -->
+        <textarea cols="20" rows="5">
+            内容
+        </textarea>
+</body>
+</html>
