@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无序列表</title>
+    <style type="text/css">
+    ul {
+        list-style: none;
+    }
+    </style>
+</head>
+<body>
+    <!-- 列表标签
+        1. 给一堆数据添加列表语义，告诉浏览器这一堆数据是一个整体
+    -->
+    <h2>中国的城市有哪些</h2>
+    <hr>
+    <ul>
+        <li>
+            <h2>上海</h2>
+        </li>
+        <li>
+            <h2>北京</h2>
+        </li>
+        <li>
+            <h2>江西</h2>
+        </li>
+    </ul>
+
+    <h2>物品清单</h2>
+    <hr>
+    <ul>
+       <li>
+           <h3>蔬菜</h3>
+           <ul>
+            <li>青菜</li>
+            <li>白菜</li>
+            <li>萝卜</li>
+           </ul> 
+       </li>
+       <!--快速生成语法 ul>h3+ul>li*4 -->
+       <li>
+           <h3>水果</h3>
+           <ul>
+                 <li>香蕉</li>
+                 <li>苹果</li>
+                 <li>桃子</li>
+            </ul>
+       </li>
+    </ul>
+
+</body>
+</html>
